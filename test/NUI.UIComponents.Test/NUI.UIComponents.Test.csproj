@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Tizen.NET.Sdk" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Tizen.Applications.Common\Tizen.Applications.Common.csproj" />
+    <ProjectReference Include="..\..\src\Tizen.Applications.UI\Tizen.Applications.UI.csproj" />
+    <ProjectReference Include="..\..\src\Tizen.Log\Tizen.Log.csproj" />
+    <ProjectReference Include="..\..\src\Tizen\Tizen.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Tizen.NUI">
+      <HintPath>..\..\src\Tizen.NUI\bin\Debug\netstandard2.0\Tizen.NUI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

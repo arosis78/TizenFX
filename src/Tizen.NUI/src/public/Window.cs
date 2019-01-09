@@ -635,6 +635,7 @@ namespace Tizen.NUI
             if (NDalicPINVOKE.SWIGPendingException.Pending) throw NDalicPINVOKE.SWIGPendingException.Retrieve();
             this.GetRootLayer().AddViewToLayerList(view); // Maintain the children list in the Layer
             view.InternalParent = this.GetRootLayer();
+            ChildObjectAdded?.Invoke(view, EventArgs.Empty);
         }
 
         /// <summary>
@@ -1038,6 +1039,12 @@ namespace Tizen.NUI
             Visible = 1,
             Auto = 2
         }
+
+        /// <summary>
+        /// ChildObjectAdded will be triggered when the child object added on Window
+        /// </summary>
+        /// <since_tizen> 3 </since_tizen>
+        public event EventHandler ChildObjectAdded;
 
         /// <summary>
         /// The touch event argument.

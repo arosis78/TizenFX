@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Log", "..\Tizen.Log\T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Applications.Common", "..\Tizen.Applications.Common\Tizen.Applications.Common.csproj", "{2AEDCAA7-543F-48A1-BEA3-CF3E14F6EDC2}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tizen.Applications.UI", "..\Tizen.Applications.UI\Tizen.Applications.UI.csproj", "{1BDEB00A-1133-46FE-8E2F-26C4C9676277}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUI.UIComponents.Test", "..\..\test\NUI.UIComponents.Test\NUI.UIComponents.Test.csproj", "{BF6AE4EB-8175-43E7-B665-8810912469B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,8 +43,19 @@ Global
 		{2AEDCAA7-543F-48A1-BEA3-CF3E14F6EDC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AEDCAA7-543F-48A1-BEA3-CF3E14F6EDC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AEDCAA7-543F-48A1-BEA3-CF3E14F6EDC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BDEB00A-1133-46FE-8E2F-26C4C9676277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BDEB00A-1133-46FE-8E2F-26C4C9676277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BDEB00A-1133-46FE-8E2F-26C4C9676277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BDEB00A-1133-46FE-8E2F-26C4C9676277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF6AE4EB-8175-43E7-B665-8810912469B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF6AE4EB-8175-43E7-B665-8810912469B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF6AE4EB-8175-43E7-B665-8810912469B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF6AE4EB-8175-43E7-B665-8810912469B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F31CE379-6977-4CC2-B0A1-63C6A06E849C}
 	EndGlobalSection
 EndGlobal

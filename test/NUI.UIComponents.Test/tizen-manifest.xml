@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="NUI.UIComponents.Test" version="1.0.0" api-version="3.0" xmlns="http://tizen.org/ns/packages">
+    <profile name="common" />
+    <ui-application appid="org.tizen.NUI.UIComponents.Test" exec="NUI.UIComponents.Test.dll" multiple="false" taskmanage="true" splash-screen-display="true" type="dotnet" launch_mode="single">
+        <icon>NUI.UIComponents.Test.png</icon>
+        <label>NUI.UIComponents.Test</label>
+        <splash-screens />
+    </ui-application>
+    <shortcut-list />
+    <provides-appdefined-privileges />
+</manifest>
