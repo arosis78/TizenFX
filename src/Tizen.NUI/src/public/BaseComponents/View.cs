@@ -1245,6 +1245,13 @@ namespace Tizen.NUI.BaseComponents
 
         private bool layoutSet = false; // Flag to indicate if SetLayout was called or View was automatically given a Layout
 
+        private OnWindowEventCallbackType _onWindowSendEventCallback;
+
+        private void SendToWindow(IntPtr data)
+        {
+            Window.Instance.SendViewConnected(this);
+        }
+
         internal View(global::System.IntPtr cPtr, bool cMemoryOwn) : base(NDalicPINVOKE.View_SWIGUpcast(cPtr), cMemoryOwn)
         {
             swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
@@ -1253,6 +1260,9 @@ namespace Tizen.NUI.BaseComponents
                 PositionUsesPivotPoint = false;
             }
             _mergedStyle = new MergedStyle(GetType(), this);
+
+            _onWindowSendEventCallback = SendToWindow;
+            this.OnWindowSignal().Connect(_onWindowSendEventCallback);
         }
 
         internal static global::System.Runtime.InteropServices.HandleRef getCPtr(View obj)
@@ -1513,6 +1523,11 @@ namespace Tizen.NUI.BaseComponents
             if (_onWindowEventCallback != null)
             {
                 this.OnWindowSignal().Disconnect(_onWindowEventCallback);
+            }
+
+            if (_onWindowSendEventCallback != null)
+            {
+                this.OnWindowSignal().Disconnect(_onWindowSendEventCallback);
             }
 
             if (_wheelEventCallback != null)

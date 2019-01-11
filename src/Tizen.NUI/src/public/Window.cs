@@ -635,7 +635,6 @@ namespace Tizen.NUI
             if (NDalicPINVOKE.SWIGPendingException.Pending) throw NDalicPINVOKE.SWIGPendingException.Retrieve();
             this.GetRootLayer().AddViewToLayerList(view); // Maintain the children list in the Layer
             view.InternalParent = this.GetRootLayer();
-            ChildObjectAdded?.Invoke(view, EventArgs.Empty);
         }
 
         /// <summary>
@@ -1041,10 +1040,15 @@ namespace Tizen.NUI
         }
 
         /// <summary>
-        /// ChildObjectAdded will be triggered when the child object added on Window
+        /// ViewConnected will be triggered when the view connected on Window
         /// </summary>
         /// <since_tizen> 3 </since_tizen>
-        public event EventHandler ChildObjectAdded;
+        public event EventHandler ViewConnected;
+
+        internal void SendViewConnected(View view)
+        {
+            ViewConnected?.Invoke(view, EventArgs.Empty);
+        }
 
         /// <summary>
         /// The touch event argument.
