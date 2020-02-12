@@ -75,6 +75,14 @@ namespace ElmSharp
         }
 
         /// <summary>
+        /// Creates and initializes a new instance of the GenGrid class.
+        /// </summary>
+        /// <since_tizen> preview </since_tizen>
+        protected GenGrid()
+        {
+        }
+
+        /// <summary>
         /// ItemSelected is raised when a new GenGrid item is selected.
         /// </summary>
         /// <since_tizen> preview </since_tizen>
